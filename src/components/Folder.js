@@ -18,7 +18,6 @@ const Folder = ({ explorer }) => {
   
   const onAddFolder = (e, explorer) => {
     if (e.keyCode === 13 && e.target.value) {
-      console.log("explorer", explorer);
       if(showInput.isFolder){
         explorer.items.unshift({
         id: new Date().getTime(),
