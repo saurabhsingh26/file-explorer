@@ -6,7 +6,7 @@ const Folder = ({ explorer }) => {
     visible: false,
     isFolder: null,
   });
-  console.log(explorer);
+
   const handleButtonClick = (e, isFolder) => {
     e.stopPropagation();
     setExpand(true);
@@ -15,13 +15,29 @@ const Folder = ({ explorer }) => {
       isFolder,
     });
   };
-  const onAddFolder = (e) => {
-    if(e.keyCode === 13 && e.target.value){
-
+  
+  const onAddFolder = (e, explorer) => {
+    if (e.keyCode === 13 && e.target.value) {
+      console.log("explorer", explorer);
+      if(showInput.isFolder){
+        explorer.items.unshift({
+        id: new Date().getTime(),
+        name: e.target.value,
+        isFolder: true,
+        items: [],
+      });
+      }else{
+        explorer.items.push({
+        id: new Date().getTime(),
+        name: e.target.value,
+        isFolder: false,
+        items: [],
+      });
+      }
       
-      setShowInput({...showInput, visible: false});
+      setShowInput({ ...showInput, visible: false });
     }
-  }
+  };
   if (explorer.isFolder) {
     return (
       <div>
@@ -52,7 +68,7 @@ const Folder = ({ explorer }) => {
               className="outline-none border"
               type="text"
               autoFocus
-              onKeyDown={onAddFolder}
+              onKeyDown={(e) => onAddFolder(e,explorer)}
               onBlur={() => setShowInput({ ...showInput, visible: false })}
             />
           </div>
