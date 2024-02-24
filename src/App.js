@@ -6,9 +6,9 @@ function App() {
   const [explorerData, setExplorerData] = useState(explorer);
 
   return (
-    <div className="App">
-      <Folder explorer={explorerData} />
-    </div>
+      <div className="mt-5 mx-5">
+        <Folder explorer={explorerData} />
+      </div>
   );
 }
 

@@ -37,27 +37,41 @@ const Folder = ({ explorer }) => {
       setShowInput({ ...showInput, visible: false });
     }
   };
+  
   if (explorer.isFolder) {
     return (
-      <div>
+      <div className="w-[95%]">
         <div
-          className=" cursor-pointer flex justify-between items-center w-[50%] mb-2 border"
+          className="cursor-pointer flex justify-between items-center mb-2 border hover:bg-[#F2F2F2]"
           onClick={() => setExpand(!expand)}
         >
           <span className="w-[50%]">📁 {explorer.name}</span>
-          <div className="">
-            <button
+          <div className="flex justify-between items-center gap-1">
+            {/* <button
               className="bg-yellow-300 px-2 mr-2"
               onClick={(e) => handleButtonClick(e, true)}
-            >
-              folder
-            </button>
-            <button
+            > */}
+
+            {/* </button> */}
+            {/* <button
               className="bg-[#ccc] px-2"
               onClick={(e) => handleButtonClick(e, false)}
             >
               file
-            </button>
+            </button> */}
+
+            <img
+              src="https://cdn-icons-png.flaticon.com/128/12274/12274922.png"
+              alt="folder"
+              className="w-6 h-6"
+              onClick={(e) => handleButtonClick(e, true)}
+            />
+            <img
+              src="https://cdn-icons-png.flaticon.com/128/6604/6604899.png"
+              alt="file"
+              className="w-6 h-6"
+              onClick={(e) => handleButtonClick(e, false)}
+            />
           </div>
         </div>
         {showInput.visible && (
@@ -67,7 +81,7 @@ const Folder = ({ explorer }) => {
               className="outline-none border"
               type="text"
               autoFocus
-              onKeyDown={(e) => onAddFolder(e,explorer)}
+              onKeyDown={(e) => onAddFolder(e, explorer)}
               onBlur={() => setShowInput({ ...showInput, visible: false })}
             />
           </div>
@@ -82,7 +96,7 @@ const Folder = ({ explorer }) => {
       </div>
     );
   } else {
-    return <span className="flex flex-col pl-1 mb-2">📄{explorer.name}</span>;
+    return <span className="flex flex-col pl-1 mb-2">📄 {explorer.name}</span>;
   }
 };
 

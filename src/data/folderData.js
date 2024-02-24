@@ -10,26 +10,31 @@ const explorer = {
       items: [
         {
           id: "3",
-          name: "public nested 1",
-          isFolder: true,
-          items: [
-            {
-              id: "4",
-              name: "index.html",
-              isFolder: false,
-              items: [],
-            },
-            {
-              id: "5",
-              name: "hello.html",
-              isFolder: false,
-              items: [],
-            },
-          ],
+          name: "favicon.ico",
+          isFolder: false,
+          items: [],
+        },
+        {
+          id: "4",
+          name: "index.html",
+          isFolder: false,
+          items: [],
+        },
+        {
+          id: "5",
+          name: "hello.html",
+          isFolder: false,
+          items: [],
         },
         {
           id: "6",
-          name: "public_nested_file",
+          name: "manifest.json",
+          isFolder: false,
+          items: [],
+        },
+        {
+          id: "15",
+          name: "robots.txt",
           isFolder: false,
           items: [],
         },
@@ -40,6 +45,44 @@ const explorer = {
       name: "src",
       isFolder: true,
       items: [
+        {
+          id: "8",
+          name: "components",
+          isFolder: true,
+          items: [
+            {
+              id: "8",
+              name: "Home.js",
+              isFolder: false,
+              items: [],
+            },
+            {
+              id: "8",
+              name: "Header.js",
+              isFolder: false,
+              items: [],
+            },
+          ],
+        },
+        {
+          id: "8",
+          name: "pages",
+          isFolder: true,
+          items: [
+            {
+              id: "8",
+              name: "Login.js",
+              isFolder: false,
+              items: [],
+            },
+            {
+              id: "8",
+              name: "Sign up.js",
+              isFolder: false,
+              items: [],
+            },
+          ],
+        },
         {
           id: "8",
           name: "App.js",
@@ -61,8 +104,20 @@ const explorer = {
       ],
     },
     {
+      id: "13",
+      name: ".gitignore",
+      isFolder: false,
+      items: [],
+    },
+    {
       id: "11",
       name: "package.json",
+      isFolder: false,
+      items: [],
+    },
+    {
+      id: "12",
+      name: "package-lock.json",
       isFolder: false,
       items: [],
     },
