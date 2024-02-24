@@ -21,12 +21,6 @@ const explorer = {
           items: [],
         },
         {
-          id: "5",
-          name: "hello.html",
-          isFolder: false,
-          items: [],
-        },
-        {
           id: "6",
           name: "manifest.json",
           isFolder: false,
