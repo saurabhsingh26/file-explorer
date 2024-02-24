@@ -61,13 +61,13 @@ const Folder = ({ explorer }) => {
             </button> */}
 
             <img
-              src="https://cdn-icons-png.flaticon.com/128/12274/12274922.png"
+              src="https://cdn-icons-png.flaticon.com/128/8834/8834889.png"
               alt="folder"
               className="w-6 h-6"
               onClick={(e) => handleButtonClick(e, true)}
             />
             <img
-              src="https://cdn-icons-png.flaticon.com/128/6604/6604899.png"
+              src="https://cdn-icons-png.flaticon.com/128/4210/4210025.png"
               alt="file"
               className="w-6 h-6"
               onClick={(e) => handleButtonClick(e, false)}
